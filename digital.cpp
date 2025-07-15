@@ -17,9 +17,9 @@ std::map<std::string, std::string> seven_segment = {
     {"4", "   \n|_|\n  |\n"},
     {"5", " _ \n|_ \n _|\n"},
     {"6", " _ \n|_ \n|_|\n"},
-    {"7", "   \n  |\n  |\n"},
+    {"7", " _ \n  |\n  |\n"},
     {"8", " _ \n|_|\n|_|\n"},
-    {"9", " _ \n|_|\n |\n"},
+    {"9", " _ \n|_|\n _|\n"},
     {":", "   \n . \n . \n"},
     {" ", "   \n   \n   \n"}
 };
@@ -52,7 +52,7 @@ std::string get_time() {
 std::vector<std::string> convert_to_ss(std::string time) {
     std::vector<std::string> time_array;
     for (int i = 0; i < time.length(); i++) {
-        time_array.push_back(seven_segment_eastern_arabic[std::string(1, time[i])]);
+        time_array.push_back(seven_segment[std::string(1, time[i])]);
     }
     return time_array;
 }
