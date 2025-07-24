@@ -24,21 +24,6 @@ std::map<std::string, std::string> seven_segment = {
     {" ", "   \n   \n   \n"}
 };
 
-std::map<std::string, std::string> seven_segment_eastern_arabic = {
-    {"0", " \n . \n \n"},
-    {"1", "   \n |\n  |\n"},
-    {"2", " _ \n| \n| \n"},
-    {"3", " _ \n _|\n _|\n"}, //look up
-    {"4", "    _\n |_ \n  |_ \n"},
-    {"5", " \n _ \n |_|\n"},
-    {"6", " _\n  |\n  |\n"},
-    {"7", R"( \     / \n \   / \n \/ \n)"},
-    {"8", R"( /\ \n /   \ \n /     \ \n)"},
-    {"9", " _ \n|_|\n |\n"},
-    {":", "   \n . \n . \n"},
-    {" ", "   \n   \n   \n"}
-};
-
 std::string get_time() {
     auto now = std::chrono::system_clock::now();
     auto now_c = std::chrono::system_clock::to_time_t(now); //conversion to c format
@@ -70,8 +55,6 @@ std::string join(std::vector<std::string> vec) {
 }
 
 int main() {
-    // std::cout << "ASCII Clock" << std::endl;
-    // return 0;
 
     while (true) {
         std::string current_time = get_time();
